@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-md-8 mx-auto">
+      <form class="loginform" #authForm="ngForm">
+        <div class="form-group">
+            <p style="color: #47A23F">Official Organization? Local business? Verify your account to post neighbourhood annoucements!</p>
+            <label for="orgname">Organization or Business Name</label>
+            <input
+                type="text"
+                id="orgname"
+                class="form-control"
+                ngModel
+                name="orgname"
+                optional
+          />
+        </div>
+        </form>
+    </div>
+</div>
+<div>
+    <p style="color: #47A23F">Upload your ID card, passport, or organization registration. We won’t show this to anyone.</p>
+    <button type="button" class="btn btn-default btn-lg" *ngIf!="isUploaded">
+        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Upload Picture
+    </button>
+    <div class="card" style="width: 18rem;" *ngIf="isUploaded">
+        <img class="card-img-top" src="https://electrek.co/wp-content/uploads/sites/3/2020/08/Tesla-Elon-Musk.jpg?quality=82&strip=all" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Picture Preview</h5>
+          <a class="btn btn-primary">Upload New Picture</a>
+        </div>
+    </div>
+</div>
+<div class="fixed-bottom">
+    <button class="btn btn-primary" (click)="onNext()">Next</button>
+</div>
