@@ -25,6 +25,11 @@ import { AnnComponent } from './post/ann/ann.component';
 import { TalkComponent } from './post/talk/talk.component';
 import { MytokoComponent } from './mytoko/mytoko.component';
 import { BannerXsComponent } from './banner/banner-xs/banner-xs.component';
+import { EditprofileComponent } from './mytoko/editprofile/editprofile.component';
+import { LocationComponent } from './mytoko/location/location.component';
+import { MyprofileComponent } from './mytoko/myprofile/myprofile.component';
+import { ChangepasswordComponent } from './mytoko/editprofile/changepassword/changepassword.component';
+import { DeleteaccComponent } from './mytoko/editprofile/deleteacc/deleteacc.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +54,11 @@ import { BannerXsComponent } from './banner/banner-xs/banner-xs.component';
     TalkComponent,
     MytokoComponent,
     BannerXsComponent,
+    EditprofileComponent,
+    LocationComponent,
+    MyprofileComponent,
+    ChangepasswordComponent,
+    DeleteaccComponent,
 
   ],
   imports: [

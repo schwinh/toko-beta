@@ -10,6 +10,11 @@ import { Signup3Component } from './auth/signup/signup3/signup3.component';
 import { Signup4Component } from './auth/signup/signup4/signup4.component';
 import { EatComponent } from './eat/eat.component';
 import { HomeComponent } from './home/home.component';
+import { ChangepasswordComponent } from './mytoko/editprofile/changepassword/changepassword.component';
+import { DeleteaccComponent } from './mytoko/editprofile/deleteacc/deleteacc.component';
+import { EditprofileComponent } from './mytoko/editprofile/editprofile.component';
+import { LocationComponent } from './mytoko/location/location.component';
+import { MyprofileComponent } from './mytoko/myprofile/myprofile.component';
 import { MytokoComponent } from './mytoko/mytoko.component';
 import { AnnComponent } from './post/ann/ann.component';
 import { PostComponent } from './post/post.component';
@@ -45,7 +50,17 @@ const routes: Routes = [
       ]}
     ] 
   },
-  { path: 'mytoko', component: MytokoComponent}
+  { path: 'mytoko', component: MytokoComponent, /*canActivate: [AuthGuard]*/ },
+  { path: 'myprofile', component: MyprofileComponent, /*canActivate: [AuthGuard]*/ },
+  { path: 'location', component: LocationComponent, /*canActivate: [AuthGuard]*/ },
+  { 
+    path: 'editprofile', 
+    component: EditprofileComponent,
+    //canActivate: [AuthGuard],
+    children: [
+      { path: 'changepw', component: ChangepasswordComponent },
+      { path: 'deleteacc', component: DeleteaccComponent }
+  ]},
 ];
 
 @NgModule({

@@ -1,0 +1,8 @@
+<app-banner-xs [page]="pageToDisplay"></app-banner-xs>
+<div class="container">
+    
+    <a routerLink="../editprofile" (click)="nav('Edit Profile')">Edit Profile</a>
+    <a routerLink="deleteacc" (click)="nav('Delete Account')">Delete Account</a>
+    <a routerLink="changepw" (click)="nav('Change Password')">Change Password</a>
+</div>
+<router-outlet></router-outlet>
