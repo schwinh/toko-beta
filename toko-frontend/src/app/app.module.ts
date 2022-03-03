@@ -37,12 +37,9 @@ import { ForwardComponent } from './common/forward/forward.component';
 import { ProfilepicComponent } from './common/profilepic/profilepic.component';
 import { WriteAnnComponent } from './post/write-ann/write-ann.component';
 import { WriteTalkComponent } from './post/write-talk/write-talk.component';
-<<<<<<< Updated upstream
-=======
 import { TalkPostComponent } from './post/talk/talk-post/talk-post.component';
 import { AnnPostComponent } from './post/ann/ann-post/ann-post.component';
 import { EatPostComponent } from './eat/eat-post/eat-post.component';
->>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -79,12 +76,9 @@ import { EatPostComponent } from './eat/eat-post/eat-post.component';
     ProfilepicComponent,
     WriteAnnComponent,
     WriteTalkComponent,
-<<<<<<< Updated upstream
-=======
     TalkPostComponent,
-    AnnPostComponent,
     EatPostComponent,
->>>>>>> Stashed changes
+    AnnPostComponent
 
   ],
   imports: [
