@@ -30,6 +30,7 @@ import { LocationComponent } from './mytoko/location/location.component';
 import { MyprofileComponent } from './mytoko/myprofile/myprofile.component';
 import { ChangepasswordComponent } from './mytoko/editprofile/changepassword/changepassword.component';
 import { DeleteaccComponent } from './mytoko/editprofile/deleteacc/deleteacc.component';
+import { PagenotfoundComponent } from './common-errors/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { DeleteaccComponent } from './mytoko/editprofile/deleteacc/deleteacc.com
     MyprofileComponent,
     ChangepasswordComponent,
     DeleteaccComponent,
+    PagenotfoundComponent,
 
   ],
   imports: [

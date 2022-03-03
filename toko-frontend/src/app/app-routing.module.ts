@@ -8,6 +8,7 @@ import { Signup1Component } from './auth/signup/signup1/signup1.component';
 import { Signup2Component } from './auth/signup/signup2/signup2.component';
 import { Signup3Component } from './auth/signup/signup3/signup3.component';
 import { Signup4Component } from './auth/signup/signup4/signup4.component';
+import { PagenotfoundComponent } from './common-errors/pagenotfound/pagenotfound.component';
 import { EatComponent } from './eat/eat.component';
 import { HomeComponent } from './home/home.component';
 import { ChangepasswordComponent } from './mytoko/editprofile/changepassword/changepassword.component';
@@ -61,6 +62,8 @@ const routes: Routes = [
       { path: 'changepw', component: ChangepasswordComponent },
       { path: 'deleteacc', component: DeleteaccComponent }
   ]},
+  { path: '**', component: PagenotfoundComponent },
+
 ];
 
 @NgModule({
