@@ -35,6 +35,8 @@ import { EatcontentComponent } from './home/eatcontent/eatcontent.component';
 import { PostcontentComponent } from './home/postcontent/postcontent.component';
 import { ForwardComponent } from './common/forward/forward.component';
 import { ProfilepicComponent } from './common/profilepic/profilepic.component';
+import { WriteAnnComponent } from './post/write-ann/write-ann.component';
+import { WriteTalkComponent } from './post/write-talk/write-talk.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,8 @@ import { ProfilepicComponent } from './common/profilepic/profilepic.component';
     PostcontentComponent,
     ForwardComponent,
     ProfilepicComponent,
+    WriteAnnComponent,
+    WriteTalkComponent,
 
   ],
   imports: [
