@@ -31,6 +31,10 @@ import { MyprofileComponent } from './mytoko/myprofile/myprofile.component';
 import { ChangepasswordComponent } from './mytoko/editprofile/changepassword/changepassword.component';
 import { DeleteaccComponent } from './mytoko/editprofile/deleteacc/deleteacc.component';
 import { PagenotfoundComponent } from './common-errors/pagenotfound/pagenotfound.component';
+import { EatcontentComponent } from './home/eatcontent/eatcontent.component';
+import { PostcontentComponent } from './home/postcontent/postcontent.component';
+import { ForwardComponent } from './common/forward/forward.component';
+import { ProfilepicComponent } from './common/profilepic/profilepic.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +65,10 @@ import { PagenotfoundComponent } from './common-errors/pagenotfound/pagenotfound
     ChangepasswordComponent,
     DeleteaccComponent,
     PagenotfoundComponent,
+    EatcontentComponent,
+    PostcontentComponent,
+    ForwardComponent,
+    ProfilepicComponent,
 
   ],
   imports: [
