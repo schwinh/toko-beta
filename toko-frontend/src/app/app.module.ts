@@ -37,6 +37,7 @@ import { ForwardComponent } from './common/forward/forward.component';
 import { ProfilepicComponent } from './common/profilepic/profilepic.component';
 import { WriteAnnComponent } from './post/write-ann/write-ann.component';
 import { WriteTalkComponent } from './post/write-talk/write-talk.component';
+import { TalkPostComponent } from './post/talk/talk-post/talk-post.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +74,7 @@ import { WriteTalkComponent } from './post/write-talk/write-talk.component';
     ProfilepicComponent,
     WriteAnnComponent,
     WriteTalkComponent,
+    TalkPostComponent,
 
   ],
   imports: [
