@@ -1,0 +1,47 @@
+<app-banner-xs [page]="pageToDisplay"></app-banner-xs>
+
+<div class="top-portion">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-block rounded-pill" routerLink="../myprofile">
+                    <div class="container">
+                        <div class="row justify-content-around align-items-center">
+                            <div class="col">
+                                <app-profilepic></app-profilepic>
+                            </div>
+                            <div class="col">
+                                <h5>My Profile</h5>
+                            </div>
+                            <div class="col">
+                                <app-forward></app-forward>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-block rounded-pill" routerLink="../location">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h5>Favorite Location</h5>
+                            </div>
+                            <div class="col">
+                                <app-forward></app-forward>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center align-items-center">
+        <p>Announcements from your Favorite Location</p>
+    </div>
+</div>

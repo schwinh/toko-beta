@@ -1,0 +1,17 @@
+<app-banner-small></app-banner-small>
+<div class="card">
+    <div class="card-header">
+      Hello, Jeffrey!
+    </div>
+    <div class="card-body" *ngIf="hasAnn">
+      <p class="card-text">You have a new announcement from your Favorite Location.</p>
+      <a class="btn btn-primary" routerLink="../mytoko">Read More</a>
+    </div>
+    <div class="card-body" *ngIf="!hasAnn">
+        <h5 class="card-title">Glad to see you on ToKo.</h5>
+        <p class="card-text">Start exploring what's around you!</p>
+      </div>
+  </div>
+<app-eatcontent></app-eatcontent>
+<app-postcontent></app-postcontent>
+<app-navbar></app-navbar>

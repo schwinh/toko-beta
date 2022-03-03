@@ -1,0 +1,17 @@
+<p>signup2 works!</p>
+<div>
+    <p>Smile! Upload your profile picture so others can recognize you. (Optional)</p>
+    <button type="button" class="btn btn-default btn-lg" *ngIf!="isUploaded">
+        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Upload Picture
+    </button>
+    <div class="card" style="width: 18rem;" *ngIf="isUploaded">
+        <img class="card-img-top" src="https://electrek.co/wp-content/uploads/sites/3/2020/08/Tesla-Elon-Musk.jpg?quality=82&strip=all">
+        <div class="card-body">
+          <h5 class="card-title">Picture Preview</h5>
+          <a class="btn btn-primary">Upload New Picture</a>
+        </div>
+    </div>
+</div>
+<div class="fixed-bottom">
+    <button class="btn btn-primary" (click)="onNext()">Next</button>
+</div>

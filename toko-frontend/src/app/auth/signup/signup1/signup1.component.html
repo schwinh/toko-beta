@@ -1,0 +1,32 @@
+<p>signup1 works!</p>
+<div class="row">
+    <div class="col-md-8 mx-auto">
+      <form class="loginform" #authForm="ngForm">
+        <div class="form-group">
+          <label for="fname">First Name</label>
+          <input
+            type="text"
+            id="fname"
+            class="form-control"
+            ngModel
+            name="fname"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name</label>
+          <input
+            type="text"
+            id="lname"
+            class="form-control"
+            ngModel
+            name="lname"
+            required
+          />
+        </div>
+        </form>
+    </div>
+</div>
+<div class="fixed-bottom">
+    <button class="btn btn-primary" (click)="onNext()">Next</button>
+</div>
