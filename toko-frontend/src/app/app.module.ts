@@ -40,6 +40,7 @@ import { WriteTalkComponent } from './post/write-talk/write-talk.component';
 import { TalkPostComponent } from './post/talk/talk-post/talk-post.component';
 import { AnnPostComponent } from './post/ann/ann-post/ann-post.component';
 import { EatPostComponent } from './eat/eat-post/eat-post.component';
+import { EatPostStarsComponent } from './eat/eat-post-stars/eat-post-stars.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +79,8 @@ import { EatPostComponent } from './eat/eat-post/eat-post.component';
     WriteTalkComponent,
     TalkPostComponent,
     EatPostComponent,
-    AnnPostComponent
+    AnnPostComponent,
+    EatPostStarsComponent
 
   ],
   imports: [
