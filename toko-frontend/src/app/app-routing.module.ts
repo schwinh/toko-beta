@@ -10,6 +10,7 @@ import { Signup3Component } from './auth/signup/signup3/signup3.component';
 import { Signup4Component } from './auth/signup/signup4/signup4.component';
 import { EatComponent } from './eat/eat.component';
 import { HomeComponent } from './home/home.component';
+import { MytokoComponent } from './mytoko/mytoko.component';
 import { AnnComponent } from './post/ann/ann.component';
 import { PostComponent } from './post/post.component';
 import { TalkComponent } from './post/talk/talk.component';
@@ -43,7 +44,8 @@ const routes: Routes = [
         { path: '4', component: Signup4Component}
       ]}
     ] 
-  }
+  },
+  { path: 'mytoko', component: MytokoComponent}
 ];
 
 @NgModule({

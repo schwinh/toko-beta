@@ -23,6 +23,8 @@ import { PostComponent } from './post/post.component';
 import { EatComponent } from './eat/eat.component';
 import { AnnComponent } from './post/ann/ann.component';
 import { TalkComponent } from './post/talk/talk.component';
+import { MytokoComponent } from './mytoko/mytoko.component';
+import { BannerXsComponent } from './banner/banner-xs/banner-xs.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { TalkComponent } from './post/talk/talk.component';
     EatComponent,
     AnnComponent,
     TalkComponent,
+    MytokoComponent,
+    BannerXsComponent,
 
   ],
   imports: [
