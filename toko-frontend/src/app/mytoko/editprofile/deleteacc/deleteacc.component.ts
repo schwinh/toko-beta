@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-deleteacc',
@@ -9,6 +9,7 @@ export class DeleteaccComponent implements OnInit {
 
   constructor() { }
 
+  pageToDisplay = "Delete ToKo Account";
   ngOnInit(): void {
   }
 

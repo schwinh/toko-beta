@@ -8,13 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class EditprofileComponent implements OnInit {
 
   pageToDisplay = "";
+  isPressed = false;
 
   ngOnInit(): void {
     this.pageToDisplay = "Edit Profile";
   }
 
-  nav(goto: string) {
-    this.pageToDisplay = goto;
+  onNav(goto: string) {
+  }
+
+  onLogout(){
+    
   }
 
 }

@@ -9,6 +9,7 @@ export class ChangepasswordComponent implements OnInit {
 
   constructor() { }
 
+  pageToDisplay = "Change Account Password";
   ngOnInit(): void {
   }
 

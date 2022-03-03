@@ -54,15 +54,11 @@ const routes: Routes = [
   { path: 'mytoko', component: MytokoComponent, /*canActivate: [AuthGuard]*/ },
   { path: 'myprofile', component: MyprofileComponent, /*canActivate: [AuthGuard]*/ },
   { path: 'location', component: LocationComponent, /*canActivate: [AuthGuard]*/ },
-  { 
-    path: 'editprofile', 
-    component: EditprofileComponent,
-    //canActivate: [AuthGuard],
-    children: [
-      { path: 'changepw', component: ChangepasswordComponent },
-      { path: 'deleteacc', component: DeleteaccComponent }
-  ]},
+  { path: 'editprofile', component: EditprofileComponent, /*canActivate: [AuthGuard]*/},
+  { path: 'changepw', component: ChangepasswordComponent },
+  { path: 'deleteacc', component: DeleteaccComponent },
   { path: '**', component: PagenotfoundComponent },
+  
 
 ];
 
