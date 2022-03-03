@@ -8,8 +8,25 @@ import { Signup1Component } from './auth/signup/signup1/signup1.component';
 import { Signup2Component } from './auth/signup/signup2/signup2.component';
 import { Signup3Component } from './auth/signup/signup3/signup3.component';
 import { Signup4Component } from './auth/signup/signup4/signup4.component';
+import { EatComponent } from './eat/eat.component';
+import { HomeComponent } from './home/home.component';
+import { AnnComponent } from './post/ann/ann.component';
+import { PostComponent } from './post/post.component';
+import { TalkComponent } from './post/talk/talk.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { 
+    path: 'post', 
+    component: PostComponent,
+    //canActivate: [AuthGuard],
+    children: [
+      { path: 'talk', component: TalkComponent},
+      { path: 'ann', component: AnnComponent}
+    ]
+  },
+  { path: 'eat', component: EatComponent, /*canActivate: [AuthGuard],*/ },
   { 
     path: 'authentication', 
     component: AuthenticationComponent,

@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
-
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { AuthenticationComponent } from './auth/authentication/authentication.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -16,6 +15,14 @@ import { BannerMedComponent } from './banner/banner-med/banner-med.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { BackComponent } from './common/back/back.component';
+import { HomeComponent } from './home/home.component';
+import { BannerSmallComponent } from './banner/banner-small/banner-small.component';
+import { ButtonWriteComponent } from './common/button-write/button-write.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { PostComponent } from './post/post.component';
+import { EatComponent } from './eat/eat.component';
+import { AnnComponent } from './post/ann/ann.component';
+import { TalkComponent } from './post/talk/talk.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +36,16 @@ import { BackComponent } from './common/back/back.component';
     Signup4Component,
     BannerMedComponent,
     SignupComponent,
-    BackComponent
+    BackComponent,
+    HomeComponent,
+    BannerSmallComponent,
+    ButtonWriteComponent,
+    NavbarComponent,
+    PostComponent,
+    EatComponent,
+    AnnComponent,
+    TalkComponent,
+
   ],
   imports: [
     BrowserModule,
