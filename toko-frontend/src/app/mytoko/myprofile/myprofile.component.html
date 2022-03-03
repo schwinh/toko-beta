@@ -1,21 +1,30 @@
 <app-banner-xs [page]="pageToDisplay"></app-banner-xs>
 
-<div class="top-portion">
-    <p>This will be myprofile card</p>
-    <a routerLink="../editprofile">Edit Profile</a>
+<div class="container top-content">
+    <div class="top-portion">
+        <app-profilecard></app-profilecard>   
+    </div>
+    
+    <div class="type-navs-portion">
+        <ul class="nav justify-content-center">
+            <div class="row">
+                <li class="nav-item">
+                    <button class="btn btn-primary rounded-pill" (click)="onClick('talk')">Talk</button>
+                  </li>
+                  <li class="nav-item">
+                      <button class="btn btn-primary rounded-pill" (click)="onClick('ann')">Announcement</button>
+                  </li>
+                  <li class="nav-item">
+                      <button class="btn btn-primary rounded-pill" (click)="onClick('eat')">Eat & Shop</button>
+                  </li>
+            </div>
+        </ul>
+    </div>
 </div>
 
-<div class="type-navs-portion">
-    <ul class="nav">
-        <li class="nav-item">
-          <button class="btn btn-primary rounded-pill">Talk</button>
-        </li>
-        <li class="nav-item">
-            <button class="btn btn-primary rounded-pill">Announcement</button>
-        </li>
-        <li class="nav-item">
-            <button class="btn btn-primary rounded-pill">Eat & Shop</button>
-        </li>
-    </ul>
+<div class="container feed-content">
+    <app-talk *ngIf="page === 'talk'"></app-talk>
+    <app-ann *ngIf="page === 'ann'"></app-ann>
 </div>
+
 

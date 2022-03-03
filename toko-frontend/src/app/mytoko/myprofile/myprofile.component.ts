@@ -10,8 +10,13 @@ export class MyprofileComponent implements OnInit {
   constructor() { }
 
   pageToDisplay = "";
+  page = 'talk';
 
   ngOnInit(): void {
     this.pageToDisplay = "My Profile";
+  }
+
+  onClick(page: string){
+    this.page = page;
   }
 }
