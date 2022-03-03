@@ -1,3 +1,21 @@
 <app-banner-xs [page]="pageToDisplay"></app-banner-xs>
-<p>myprofile works!</p>
-<a routerLink="../editprofile">Edit Profile</a>
+
+<div class="top-portion">
+    <p>This will be myprofile card</p>
+    <a routerLink="../editprofile">Edit Profile</a>
+</div>
+
+<div class="type-navs-portion">
+    <ul class="nav">
+        <li class="nav-item">
+          <button class="btn btn-primary rounded-pill">My Talk</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-primary rounded-pill">My Announcement</button>
+        </li>
+        <li class="nav-item">
+            <button class="btn btn-primary rounded-pill">My Places</button>
+        </li>
+    </ul>
+</div>
+
