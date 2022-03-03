@@ -20,6 +20,8 @@ import { MytokoComponent } from './mytoko/mytoko.component';
 import { AnnComponent } from './post/ann/ann.component';
 import { PostComponent } from './post/post.component';
 import { TalkComponent } from './post/talk/talk.component';
+import { WriteAnnComponent } from './post/write-ann/write-ann.component';
+import { WriteTalkComponent } from './post/write-talk/write-talk.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -33,6 +35,8 @@ const routes: Routes = [
       { path: 'ann', component: AnnComponent}
     ]
   },
+  { path: 'write-talk', component: WriteTalkComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'write-ann', component: WriteAnnComponent, /*canActivate: [AuthGuard],*/ },
   { path: 'eat', component: EatComponent, /*canActivate: [AuthGuard],*/ },
   { 
     path: 'authentication', 

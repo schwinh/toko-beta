@@ -9,6 +9,7 @@ export class WriteAnnComponent implements OnInit {
 
   constructor() { }
 
+  pageToDisplay = "Create Announcement";
   ngOnInit(): void {
   }
 

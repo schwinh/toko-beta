@@ -9,6 +9,7 @@ export class WriteTalkComponent implements OnInit {
 
   constructor() { }
 
+  pageToDisplay = "Create Post"
   ngOnInit(): void {
   }
 
