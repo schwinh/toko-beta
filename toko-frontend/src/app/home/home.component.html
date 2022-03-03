@@ -1,4 +1,5 @@
 <app-banner-small></app-banner-small>
+
 <div class="card">
     <div class="card-header">
       Hello, Jeffrey!
@@ -10,8 +11,17 @@
     <div class="card-body" *ngIf="!hasAnn">
         <h5 class="card-title">Glad to see you on ToKo.</h5>
         <p class="card-text">Start exploring what's around you!</p>
-      </div>
-  </div>
-<app-eatcontent></app-eatcontent>
-<app-postcontent></app-postcontent>
+    </div>
+</div>
+
+<div class="container">
+  <h5>Places you might be interested in</h5>
+  <app-eatcontent></app-eatcontent>
+</div>
+
+<div class="container">
+  <h5>You might like these posts</h5>
+  <app-postcontent></app-postcontent>
+</div>
+
 <app-navbar></app-navbar>
