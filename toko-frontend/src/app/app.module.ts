@@ -42,6 +42,7 @@ import { AnnPostComponent } from './post/ann/ann-post/ann-post.component';
 import { EatPostComponent } from './eat/eat-post/eat-post.component';
 import { EatPostStarsComponent } from './eat/eat-post-stars/eat-post-stars.component';
 import { ProfilecardComponent } from './mytoko/myprofile/profilecard/profilecard.component';
+import { WriteEatComponent } from './eat/write-eat/write-eat.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { ProfilecardComponent } from './mytoko/myprofile/profilecard/profilecard
     EatPostComponent,
     AnnPostComponent,
     EatPostStarsComponent,
-    ProfilecardComponent
+    ProfilecardComponent,
+    WriteEatComponent
 
   ],
   imports: [
