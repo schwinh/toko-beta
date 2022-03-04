@@ -10,6 +10,7 @@ import { FireauthService } from 'src/app/auth/fireauth.service';
 export class BannerMedComponent implements OnInit {
 
   currentStepIndex = -1;
+  signupInfoDisplay = ""
   subscription: Subscription = new Subscription;
   /*implement: this banner subscribe to currentstepindex from authservice*/
 
@@ -20,11 +21,26 @@ export class BannerMedComponent implements OnInit {
       .subscribe(
         (currentStepIndex: number) => {
           this.currentStepIndex = currentStepIndex;
+          this.onChangeStep(currentStepIndex);
         }
       );
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
+  }
+
+  onChangeStep(currentStepIndex: number) {
+    if(currentStepIndex = 0) {
+      this.signupInfoDisplay = "ToKo End-user Agreement";
+    } else if (currentStepIndex = 1) {
+      this.signupInfoDisplay = "Basic Information";
+    } else if (currentStepIndex = 2) {
+      this.signupInfoDisplay = "Profile Picture";
+    } else if (currentStepIndex = 3) {
+      this.signupInfoDisplay = "Personalize Your Feed";
+    } else if (currentStepIndex = 4) {
+      this.signupInfoDisplay = "Verify Your Account";
+    }
   }
 }
