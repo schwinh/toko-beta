@@ -1,18 +1,28 @@
 <app-banner-small></app-banner-small>
 
-<div class="card">
-    <div class="card-header">
-      Hello, Jeffrey!
-    </div>
-    <div class="card-body" *ngIf="hasAnn">
-      <p class="card-text">You have a new announcement from your Favorite Location.</p>
-      <a class="btn btn-primary" routerLink="../mytoko">Read More</a>
-    </div>
-    <div class="card-body" *ngIf="!hasAnn">
-        <h5 class="card-title">Glad to see you on ToKo.</h5>
-        <p class="card-text">Start exploring what's around you!</p>
+<div class="container">
+    <div class="card">
+      <div class="card-body" *ngIf="hasAnn">
+        <div class="container">
+          <div class="row">
+            <h4>Hello, Jeffrey!</h4>
+          </div>
+          <div class="row">
+            <p class="card-text">You have a new announcement from your Favorite Location.</p>
+          </div>
+          <div class="row justify-content-end">
+            <a class="btn rounded-pill" style="background-color: #6C757D; color: white" routerLink="../mytoko">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-body" *ngIf="!hasAnn">
+          <h4>Hello, Jeffrey!</h4>
+          <p class="card-text">Glad to see you on ToKo.</p>
+          <p class="card-text">Start exploring what's around you!</p>
+      </div>
     </div>
 </div>
+
 
 <div class="container">
   <h5 class="contentheader">Places you might be interested in</h5>
