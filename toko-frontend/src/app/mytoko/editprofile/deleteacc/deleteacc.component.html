@@ -1,1 +1,37 @@
 <app-banner-xs [page]="pageToDisplay"></app-banner-xs>
+
+<div class="container">
+    <h5>Delete Your ToKo Account</h5>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+          <form class="loginform" #authForm="ngForm">
+            <div class="form-group">
+              <label for="oldpw">Your Password</label>
+              <input
+                type="password"
+                id="pw"
+                class="form-control"
+                ngModel
+                name="pw"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="confirmpw">Confirm Password</label>
+              <input
+                type="password"
+                id="confirmpw"
+                class="form-control"
+                ngModel
+                name="confirmpw"
+                required
+              />
+            </div>
+            </form>
+            <button class="btn btn-block rounded-pill"  style="background-color: red; color: white">Confirm Change</button>
+        </div>
+    </div>
+</div>

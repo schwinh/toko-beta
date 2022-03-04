@@ -1,7 +1,64 @@
-<app-banner-xs [page]="pageToDisplay"></app-banner-xs>
+<div class="banner-portion">
+    <app-banner-xs [page]="pageToDisplay"></app-banner-xs>
+</div>
 
 <div class="edit-portion">
-    <app-profilepic></app-profilepic>
+    <span class="card-wrapper">
+        <div class="col-md-6 col-lg-4">
+            <div
+              class="card card-profile"
+              data-image="img-rounded"
+            >
+              <div class="card-avatar">
+                <a href="javascript:;">
+                  <img class="img" src="assets/img/faces/team-1.jpg" />
+                </a>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                      <form class="editform" #authForm="ngForm">
+                        <div class="form-group">
+                          <label for="fname">First Name</label>
+                          <input
+                            type="text"
+                            id="fname"
+                            class="form-control"
+                            ngModel
+                            name="fname"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                          <label for="lname">Last Name</label>
+                          <input
+                            type="text"
+                            id="lname"
+                            class="form-control"
+                            ngModel
+                            name="lname"
+                            required
+                          />
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <input
+                              type="text"
+                              id="bio"
+                              class="form-control"
+                              ngModel
+                              name="bio"
+                              required
+                            />
+                          </div>
+                          <button class="btn rounded-pill" style="background-color: #6C757D; color: white">Submit</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </span>
 </div>
 
 <div class="button-portion">
