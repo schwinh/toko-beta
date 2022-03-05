@@ -11,6 +11,7 @@ import { Signup4Component } from './auth/signup/signup4/signup4.component';
 import { PagenotfoundComponent } from './common-errors/pagenotfound/pagenotfound.component';
 import { EatDetailComponent } from './eat/eat-detail/eat-detail.component';
 import { EatComponent } from './eat/eat.component';
+import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comment.component';
 import { WriteEatComponent } from './eat/write-eat/write-eat.component';
 import { HomeComponent } from './home/home.component';
 import { ChangepasswordComponent } from './mytoko/editprofile/changepassword/changepassword.component';
@@ -42,6 +43,7 @@ const routes: Routes = [
   { path: 'eat', component: EatComponent, /*canActivate: [AuthGuard],*/ },
   { path: 'eat-detail', component: EatDetailComponent, /*canActivate: [AuthGuard],*/ },
   { path: 'write-eat', component: WriteEatComponent },
+  { path: 'write-eat-comment', component: WriteEatCommentComponent },
   { 
     path: 'authentication', 
     component: AuthenticationComponent,
