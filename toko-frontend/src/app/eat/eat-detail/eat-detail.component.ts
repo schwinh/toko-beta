@@ -9,6 +9,7 @@ export class EatDetailComponent implements OnInit {
 
   constructor() { }
 
+  pageToDisplay = 'Place Detail';
   ngOnInit(): void {
   }
 
