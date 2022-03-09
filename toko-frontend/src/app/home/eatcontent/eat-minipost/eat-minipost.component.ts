@@ -12,4 +12,6 @@ export class EatMinipostComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  imgSrc = "https://assets3.thrillist.com/v1/image/2769757/1200x600/scale;"
+
 }
