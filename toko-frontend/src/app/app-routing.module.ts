@@ -22,8 +22,10 @@ import { MyprofileComponent } from './mytoko/myprofile/myprofile.component';
 import { MytokoComponent } from './mytoko/mytoko.component';
 import { AnnComponent } from './post/ann/ann.component';
 import { PostComponent } from './post/post.component';
+import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
 import { TalkComponent } from './post/talk/talk.component';
 import { WriteAnnComponent } from './post/write-ann/write-ann.component';
+import { WriteTalkCommentComponent } from './post/write-talk-comment/write-talk-comment.component';
 import { WriteTalkComponent } from './post/write-talk/write-talk.component';
 
 const routes: Routes = [
@@ -39,11 +41,18 @@ const routes: Routes = [
     ]
   },
   { path: 'write-talk', component: WriteTalkComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'talk-detail', component: TalkDetailComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'write-talk-comment', component: WriteTalkCommentComponent, /*canActivate: [AuthGuard],*/},
   { path: 'write-ann', component: WriteAnnComponent, /*canActivate: [AuthGuard],*/ },
+
+
   { path: 'eat', component: EatComponent, /*canActivate: [AuthGuard],*/ },
   { path: 'eat-detail', component: EatDetailComponent, /*canActivate: [AuthGuard],*/ },
   { path: 'write-eat', component: WriteEatComponent },
   { path: 'write-eat-comment', component: WriteEatCommentComponent },
+
+
+
   { 
     path: 'authentication', 
     component: AuthenticationComponent,

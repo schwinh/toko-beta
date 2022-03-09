@@ -1,0 +1,27 @@
+<app-banner-xs [page]="pageToDisplay"></app-banner-xs>
+
+<div class="container text-portion">
+    <form>
+        <div class="form-group" [ngClass]="{ 'focused': focus10 === true }">
+            <div class="mb-3 mt-5">
+                <small class="text-uppercase">
+                    You are commenting on <b>Jessica Doe's</b> post
+                </small>
+            </div>
+            <textarea
+            class="form-control" (blur)="focus10 = false" (focus)="focus10 = true"
+            id="exampleFormControlTextarea1"
+            placeholder="You can write your comment here..."
+            rows="3"
+            spellcheck="false"
+            ></textarea>
+            <small>
+                Your comment will be publicly visible on this post.
+            </small>
+        </div>
+      </form>
+</div>
+
+<div class="container" style="margin-top: 5%">
+    <button class="btn btn-default rounded-pill btn-block">Submit Comment</button>
+</div>

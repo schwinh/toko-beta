@@ -48,6 +48,8 @@ import { PostMinipostComponent } from './home/postcontent/post-minipost/post-min
 import { EatDetailComponent } from './eat/eat-detail/eat-detail.component';
 import { WriteCommentComponent } from './common/write-comment/write-comment.component';
 import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comment.component';
+import { WriteTalkCommentComponent } from './post/write-talk-comment/write-talk-comment.component';
+import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +96,9 @@ import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comm
     PostMinipostComponent,
     EatDetailComponent,
     WriteCommentComponent,
-    WriteEatCommentComponent
+    WriteEatCommentComponent,
+    WriteTalkCommentComponent,
+    TalkDetailComponent
 
   ],
   imports: [
