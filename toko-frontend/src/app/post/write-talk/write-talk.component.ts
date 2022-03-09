@@ -10,7 +10,14 @@ export class WriteTalkComponent implements OnInit {
   constructor() { }
 
   pageToDisplay = "Create Post"
+  focus10 = true
+  isUploaded = false
+
   ngOnInit(): void {
+  }
+
+  uploadPic(){
+    this.isUploaded = !this.isUploaded
   }
 
 }
