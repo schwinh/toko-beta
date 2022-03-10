@@ -17,7 +17,7 @@ export class EatPostComponent implements OnInit {
     "imgSrc" : "https://assets3.thrillist.com/v1/image/2769757/1200x600/scale;",
     "des" : "Fresh sandwiches, quick service, reasonable price.",
     "distance" : 1.5,
-    "stars" : 2
+    "stars" : 4
   }
 
 }
