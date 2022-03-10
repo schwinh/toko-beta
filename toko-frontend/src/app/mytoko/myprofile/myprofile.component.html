@@ -1,30 +1,25 @@
 <app-banner-xs [page]="pageToDisplay"></app-banner-xs>
 
-<div class="container top-content">
-    <div class="top-portion">
-        <app-profilecard></app-profilecard>   
-    </div>
-    
-    <div class="type-navs-portion">
-        <ul class="nav justify-content-center">
-            <div class="row">
-                <li class="nav-item">
-                    <button class="btn btn-primary rounded-pill" (click)="onClick('talk')">Talk</button>
-                  </li>
-                  <li class="nav-item">
-                      <button class="btn btn-primary rounded-pill" (click)="onClick('ann')">Announcement</button>
-                  </li>
-                  <li class="nav-item">
-                      <button class="btn btn-primary rounded-pill" (click)="onClick('eat')">Eat & Shop</button>
-                  </li>
-            </div>
-        </ul>
-    </div>
+<div class="container justify-content-center profile-portion">
+    <app-profilecard></app-profilecard>   
 </div>
 
-<div class="container feed-content">
+<div class="navs-portion">
+    <ul class="nav justify-content-center">
+        <div class="row">
+            
+            <button class="btn btn-primary rounded-pill" (click)="onClick('talk')">Talk</button>
+            <button class="btn btn-primary rounded-pill" (click)="onClick('ann')">Announcement</button>
+            <button class="btn btn-primary rounded-pill" (click)="onClick('eat')">Eat & Shop</button>
+           
+        </div>
+    </ul>
+</div>
+
+<div class="container feed-portion">
     <app-talk *ngIf="page === 'talk'"></app-talk>
     <app-ann *ngIf="page === 'ann'"></app-ann>
+    <app-eat-post *ngIf="page === 'eat'"></app-eat-post>
 </div>
 
 
