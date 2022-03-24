@@ -18,9 +18,9 @@ export class ButtonWriteComponent implements OnInit {
   ngOnInit(): void {
     this.subscription = this.feedService.writeButtonChange
       .subscribe(
-        (buttonText: string) => {
-          if(buttonText != ''){
-            this.buttonText = buttonText;
+        (buttonTextIn: string) => {
+          if(buttonTextIn != ''){
+            this.buttonText = buttonTextIn;
             console.log("rcv: "+this.buttonText);
           } else {
             this.buttonText = '';

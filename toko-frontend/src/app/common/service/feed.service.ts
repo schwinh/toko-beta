@@ -8,7 +8,7 @@ export class FeedService {
 
   constructor(){}
 
-  /*-------MECHANIC FOR WRITE BUTTON-----------*/
+  /*-------MECHANIC FOR WRITE POST BUTTON-----------*/
   writeButton = "";
 
   writeButtonChange: Subject<string> = new Subject<string>();
