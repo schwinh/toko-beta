@@ -1,22 +1,21 @@
 <app-banner-small></app-banner-small>
 
 <div class="container">
-    <div class="card" style=" background-image:'assets/img/ill/1.svg';">
+    <div class="card">
 
-     
-        <div class="card-body" *ngIf="hasAnn">
+      <div class="card-body" *ngIf="hasAnn">
           <div class="container">
             <div class="row">
-              <h4>Hello, Jeffrey!</h4>
+              <h4 style="color: #28A745; font-style: normal; font-weight: 600;">Hello, Jeffrey!</h4>
             </div>
             <div class="row">
               <p class="card-text">You have a new announcement from your Favorite Location.</p>
             </div>
             <div class="row justify-content-end">
-              <button class="btn btn-default btn-round mr-1" type="button" routerLink="../mytoko">Read More</button>
+              <button class="btn btn-round mr-1" type="button" style="background-color: #6C757D; color: white" routerLink="../mytoko">Read More</button>
             </div>
           </div>
-        </div>
+      </div>
       
      
       <div class="card-body" *ngIf="!hasAnn">
@@ -24,17 +23,19 @@
           <p class="card-text">Glad to see you on ToKo.</p>
           <p class="card-text">Start exploring what's around you!</p>
       </div>
+
+
     </div>
 </div>
 
 
 <div class="container">
-  <h6 class="contentheader">Places you might be interested in</h6>
+  <h6 class="contentheader" style="font-style: normal; font-weight: 600;">Places you might be interested in</h6>
   <app-eatcontent></app-eatcontent>
 </div>
 
 <div class="container">
-  <h6 class="contentheader" style="margin-top: 3%">You might like these posts</h6>
+  <h6 class="contentheader" style="margin-top: 3%; font-style: normal; font-weight: 600;">You might like these posts</h6>
   <app-postcontent></app-postcontent>
 </div>
 
