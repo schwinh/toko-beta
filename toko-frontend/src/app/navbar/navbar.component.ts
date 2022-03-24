@@ -15,13 +15,13 @@ export class NavbarComponent implements OnInit {
   }
 
   pageFocus(toPage: string) {
-    if (toPage === '/post') {
+    if (toPage === '/post' || toPage === '/post/talk' || toPage === '/post/ann') {
       const button = window.document.getElementById("post")!;
       button.focus();
     } else if (toPage === '/home') {
       const button = window.document.getElementById("home")!;
       button.focus();
-    } else if (toPage === '/eat') {
+    } else if (toPage === '/eat' || toPage === '/eat-detail') {
       const button = window.document.getElementById("eat")!;
       button.focus();
     }
