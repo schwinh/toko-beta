@@ -5,15 +5,13 @@
 </div>
 
 <div class="navs-portion">
-    <ul class="nav justify-content-center">
-        <div class="row">
-            
-            <button class="btn btn-primary rounded-pill" (click)="onClick('talk')">Talk</button>
-            <button class="btn btn-primary rounded-pill" (click)="onClick('ann')">Announcement</button>
-            <button class="btn btn-primary rounded-pill" (click)="onClick('eat')">Eat & Shop</button>
-           
+    <div class="container">
+        <div class="scrolling-wrapper">
+            <div class="button"><button class="btn rounded-pill" (click)="onClick('talk')">My Talk</button></div>
+            <div class="button"><button class="btn rounded-pill" (click)="onClick('ann')">My Announcement</button></div>
+            <div class="button"><button class="btn rounded-pill" (click)="onClick('eat')">My Eat & Shop</button></div>
         </div>
-    </ul>
+    </div>
 </div>
 
 <div class="container feed-portion">

@@ -11,7 +11,20 @@
     margin-top: 3%;
 }
 
-.btn-primary {
+.btn {
     background-color: #47A23F;
-    border-color: #47A23F;
+    color: white;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+}
+
+.button {
+    margin-right: 3%;
 }
