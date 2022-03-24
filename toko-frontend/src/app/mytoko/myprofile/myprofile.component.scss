@@ -12,8 +12,13 @@
 }
 
 .btn {
-    background-color: #47A23F;
+    background-color: #CED4DA;
     color: white;
+}
+
+.btn:focus {
+    background-color: #47A23F; 
+    color: white
 }
 
 .scrolling-wrapper {
