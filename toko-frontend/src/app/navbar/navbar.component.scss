@@ -1,7 +1,18 @@
 .nav{
-    color: #47A23F;
     min-height: 10%;
     margin-top: 70px;
+}
+
+.nav-item {
+    color: #CED4DA;
+}
+
+.nav-item:focus {
+    color: #47A23F;
+}
+
+.nav-item:hover {
+    color: #47A23F;
 }
 
 
