@@ -1,5 +1,4 @@
-<p>signup2 works!</p>
-<div>
+<div class="container top-portion" style="margin-top: 3%">
     <p>Smile! Upload your profile picture so others can recognize you. (Optional)</p>
     <button type="button" class="btn btn-default btn-lg" *ngIf!="isUploaded">
         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Upload Picture
@@ -12,6 +11,9 @@
         </div>
     </div>
 </div>
-<div class="fixed-bottom">
-    <button class="btn btn-primary" (click)="onNext()">Next</button>
+   
+<div class="container nextbtn-portion">
+    <div class="fixed-bottom">
+      <button class="btn btn-block rounded-pill" style="background-color: #6C757D; color: white; margin-bottom: 3%;" (click)="onNext()">Next</button>
+    </div>
 </div>
