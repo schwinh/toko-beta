@@ -13,6 +13,11 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.navigate(['talk'], {relativeTo: this.route});
+    this.getfocus();
   }
 
+  getfocus() {
+    const talkButton = window.document.getElementById("talkbutton")!;
+    talkButton.focus();
+  }
 }
