@@ -50,6 +50,15 @@ import { WriteCommentComponent } from './common/write-comment/write-comment.comp
 import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comment.component';
 import { WriteTalkCommentComponent } from './post/write-talk-comment/write-talk-comment.component';
 import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+
+
 
 @NgModule({
   declarations: [
@@ -105,7 +114,13 @@ import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

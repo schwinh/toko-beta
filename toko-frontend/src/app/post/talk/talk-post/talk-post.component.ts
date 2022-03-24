@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { Observable } from 'rxjs';
+
+import { TalkPost } from '../../talk-post.model';
 
 @Component({
   selector: 'app-talk-post',
@@ -6,10 +10,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./talk-post.component.scss']
 })
 export class TalkPostComponent implements OnInit {
+  @Input() talkPost: TalkPost;
+  imgUrl: Observable<string | null>;
 
-  constructor() { }
+  constructor(private afStorage: AngularFireStorage) { }
 
   ngOnInit(): void {
+    const ref = this.afStorage.ref(this.talkPost.postImgPath);
+    this.imgUrl = ref.getDownloadURL();
   }
 
   postSrc = {

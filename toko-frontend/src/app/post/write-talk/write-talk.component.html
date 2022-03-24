@@ -1,7 +1,7 @@
 <app-banner-xs [page]="pageToDisplay"></app-banner-xs>
 
 <div class="container first-portion">
-    <form>
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div class="form-group" [ngClass]="{ 'focused': focus10 === true }">
             <div class="mb-3 mt-5">
                 <small class="text-uppercase">
@@ -9,8 +9,13 @@
                 </small>
             </div>
             <textarea
-            class="form-control" (blur)="focus10 = false" (focus)="focus10 = true"
-            id="exampleFormControlTextarea1"
+            class="form-control" 
+            (blur)="focus10 = false" 
+            (focus)="focus10 = true"
+            id="talkPostDesc"
+            name="talkPostDesc"
+            ngModel
+            required
             placeholder="What's on your mind?"
             rows="3"
             spellcheck="false"
@@ -19,11 +24,50 @@
                 Your post will be publicly visible at this location.
             </small>
         </div>
-      </form>
+        <div class="form-group">
+            <label for="pictureUrl">INSERT AN IMAGE!</label>
+            <input
+                type="file"
+                id="pictureUrl"
+                class="file-input"
+                name="pictureUrl"
+                (change)="onUploadImg($event)"
+                accept=".png,.jpg"
+                required
+                #fileUpload>
+            <div class="file-upload">
+                <div class="col-xs">
+                    {{ uploadPath || "No file uploaded yet."}}
+                </div>
+                <div class="col-xs">
+                    <button type="button" class="btn btn-default rounded-pill" *ngIf="!isUploaded" (click)="fileUpload.click()">
+                        <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Upload Picture
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="uploadProgress | async as pct">
+                <progress [value]="pct" max="100"></progress>
+            </div>
+            <img [src]="uploadUrl | async" style="max-height: 200px;">
+        </div>
+        <div class="form-group">
+            <select
+                id="category"
+                class="form-control"
+                [ngModel]="defaultCategory"
+                name="category">
+                <option value="unknown">Select Post Category</option>
+                <option value="general">General</option>
+                <option value="specific">Specific</option>
+            </select>
+        </div>
+        <div class="container" style="margin-top: 8%">
+            <button class="btn btn-default rounded-pill btn-block" type="submit" [disabled]="!f.valid">Submit Post</button>
+        </div>
+    </form>
 </div>
 
-<div class="container second-portion">
-
+<!-- <div class="container second-portion">
     <button type="button" class="btn btn-default rounded-pill" *ngIf="!isUploaded" (click)="uploadPic()">
         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Upload Picture
     </button>
@@ -34,8 +78,5 @@
           <button class="btn btn-default rounded-pill">Upload New Picture</button>
         </div>
     </div>
-</div>
+</div> -->
 
-<div class="container" style="margin-top: 8%">
-    <button class="btn btn-default rounded-pill btn-block">Submit Post</button>
-</div>
