@@ -51,6 +51,7 @@ import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comm
 import { WriteTalkCommentComponent } from './post/write-talk-comment/write-talk-comment.component';
 import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
 import { EatCommentComponent } from './eat/eat-detail/eat-comment/eat-comment.component';
+import { TalkCommentComponent } from './post/talk-detail/talk-comment/talk-comment.component';
 
 @NgModule({
   declarations: [
@@ -100,7 +101,8 @@ import { EatCommentComponent } from './eat/eat-detail/eat-comment/eat-comment.co
     WriteEatCommentComponent,
     WriteTalkCommentComponent,
     TalkDetailComponent,
-    EatCommentComponent
+    EatCommentComponent,
+    TalkCommentComponent
 
   ],
   imports: [
