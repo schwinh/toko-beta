@@ -12,4 +12,7 @@ export class EatCommentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  commenterName = "Dylann Wyatt";
+  comment = "Good food, great service!";
+
 }
