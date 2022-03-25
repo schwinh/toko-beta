@@ -13,6 +13,7 @@ export class EatComponent implements OnInit {
   ngOnInit(): void {
     /*-----HANDLE WRITE BUTTON-------*/
     this.feedService.setWriteButton("eat");
+
   }
 
 }

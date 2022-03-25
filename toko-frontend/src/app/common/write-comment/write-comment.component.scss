@@ -1,0 +1,9 @@
+ .form-control{
+     border-radius: 20em;
+     border-color: #28A745;
+ }
+
+ ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #28A745;
+    opacity: 1; /* Firefox */
+  }

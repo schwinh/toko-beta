@@ -38,6 +38,25 @@ import { ProfilepicComponent } from './common/profilepic/profilepic.component';
 import { WriteAnnComponent } from './post/write-ann/write-ann.component';
 import { WriteTalkComponent } from './post/write-talk/write-talk.component';
 import { TalkPostComponent } from './post/talk/talk-post/talk-post.component';
+import { AnnPostComponent } from './post/ann/ann-post/ann-post.component';
+import { EatPostComponent } from './eat/eat-post/eat-post.component';
+import { EatPostStarsComponent } from './eat/eat-post-stars/eat-post-stars.component';
+import { ProfilecardComponent } from './mytoko/myprofile/profilecard/profilecard.component';
+import { WriteEatComponent } from './eat/write-eat/write-eat.component';
+import { EatMinipostComponent } from './home/eatcontent/eat-minipost/eat-minipost.component';
+import { PostMinipostComponent } from './home/postcontent/post-minipost/post-minipost.component';
+import { EatDetailComponent } from './eat/eat-detail/eat-detail.component';
+import { WriteCommentComponent } from './common/write-comment/write-comment.component';
+import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comment.component';
+import { WriteTalkCommentComponent } from './post/write-talk-comment/write-talk-comment.component';
+import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 
 @NgModule({
   declarations: [
@@ -75,13 +94,31 @@ import { TalkPostComponent } from './post/talk/talk-post/talk-post.component';
     WriteAnnComponent,
     WriteTalkComponent,
     TalkPostComponent,
+    EatPostComponent,
+    AnnPostComponent,
+    EatPostStarsComponent,
+    ProfilecardComponent,
+    WriteEatComponent,
+    EatMinipostComponent,
+    PostMinipostComponent,
+    EatDetailComponent,
+    WriteCommentComponent,
+    WriteEatCommentComponent,
+    WriteTalkCommentComponent,
+    TalkDetailComponent
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

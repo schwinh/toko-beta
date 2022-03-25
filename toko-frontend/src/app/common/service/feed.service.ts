@@ -8,7 +8,7 @@ export class FeedService {
 
   constructor(){}
 
-  /*-------MECHANIC FOR WRITE BUTTON-----------*/
+  /*-------MECHANIC FOR WRITE POST BUTTON-----------*/
   writeButton = "";
 
   writeButtonChange: Subject<string> = new Subject<string>();
@@ -25,7 +25,7 @@ export class FeedService {
       this.writeButton = "Write a new announcement...";
       this.broadcastWriteButton();
     } else if(page === "eat"){
-      this.writeButton = "Add a new location...";
+      this.writeButton = "Add a new place...";
       this.broadcastWriteButton();
     } else {
       this.writeButton = "";

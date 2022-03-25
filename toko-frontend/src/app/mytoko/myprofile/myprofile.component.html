@@ -1,21 +1,25 @@
 <app-banner-xs [page]="pageToDisplay"></app-banner-xs>
 
-<div class="top-portion">
-    <p>This will be myprofile card</p>
-    <a routerLink="../editprofile">Edit Profile</a>
+<div class="container justify-content-center profile-portion">
+    <app-profilecard></app-profilecard>   
 </div>
 
-<div class="type-navs-portion">
-    <ul class="nav">
-        <li class="nav-item">
-          <button class="btn btn-primary rounded-pill">Talk</button>
-        </li>
-        <li class="nav-item">
-            <button class="btn btn-primary rounded-pill">Announcement</button>
-        </li>
-        <li class="nav-item">
-            <button class="btn btn-primary rounded-pill">Places</button>
-        </li>
+<div class="navs-portion">
+    <ul class="nav justify-content-center">
+        <div class="row">
+            
+            <button class="btn btn-primary rounded-pill" (click)="onClick('talk')">Talk</button>
+            <button class="btn btn-primary rounded-pill" (click)="onClick('ann')">Announcement</button>
+            <button class="btn btn-primary rounded-pill" (click)="onClick('eat')">Eat & Shop</button>
+           
+        </div>
     </ul>
 </div>
+
+<div class="container feed-portion">
+    <app-talk *ngIf="page === 'talk'"></app-talk>
+    <app-ann *ngIf="page === 'ann'"></app-ann>
+    <app-eat-post *ngIf="page === 'eat'"></app-eat-post>
+</div>
+
 

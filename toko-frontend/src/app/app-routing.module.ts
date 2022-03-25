@@ -9,7 +9,10 @@ import { Signup2Component } from './auth/signup/signup2/signup2.component';
 import { Signup3Component } from './auth/signup/signup3/signup3.component';
 import { Signup4Component } from './auth/signup/signup4/signup4.component';
 import { PagenotfoundComponent } from './common-errors/pagenotfound/pagenotfound.component';
+import { EatDetailComponent } from './eat/eat-detail/eat-detail.component';
 import { EatComponent } from './eat/eat.component';
+import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comment.component';
+import { WriteEatComponent } from './eat/write-eat/write-eat.component';
 import { HomeComponent } from './home/home.component';
 import { ChangepasswordComponent } from './mytoko/editprofile/changepassword/changepassword.component';
 import { DeleteaccComponent } from './mytoko/editprofile/deleteacc/deleteacc.component';
@@ -19,7 +22,11 @@ import { MyprofileComponent } from './mytoko/myprofile/myprofile.component';
 import { MytokoComponent } from './mytoko/mytoko.component';
 import { AnnComponent } from './post/ann/ann.component';
 import { PostComponent } from './post/post.component';
+import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
 import { TalkComponent } from './post/talk/talk.component';
+import { WriteAnnComponent } from './post/write-ann/write-ann.component';
+import { WriteTalkCommentComponent } from './post/write-talk-comment/write-talk-comment.component';
+import { WriteTalkComponent } from './post/write-talk/write-talk.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -33,7 +40,19 @@ const routes: Routes = [
       { path: 'ann', component: AnnComponent}
     ]
   },
+  { path: 'write-talk', component: WriteTalkComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'talk-detail', component: TalkDetailComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'write-talk-comment', component: WriteTalkCommentComponent, /*canActivate: [AuthGuard],*/},
+  { path: 'write-ann', component: WriteAnnComponent, /*canActivate: [AuthGuard],*/ },
+
+
   { path: 'eat', component: EatComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'eat-detail', component: EatDetailComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'write-eat', component: WriteEatComponent },
+  { path: 'write-eat-comment', component: WriteEatCommentComponent },
+
+
+
   { 
     path: 'authentication', 
     component: AuthenticationComponent,

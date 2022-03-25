@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "toko-backend": {
+      "hosting": {
+        "toko-frontend": [
+          "toko-backend"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "toko-backend"
+  }
+}

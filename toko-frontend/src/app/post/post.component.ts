@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FeedService } from '../common/service/feed.service';
 
 @Component({
   selector: 'app-post',
@@ -8,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PostComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private feedService: FeedService) { }
 
   ngOnInit(): void {
     this.router.navigate(['talk'], {relativeTo: this.route});

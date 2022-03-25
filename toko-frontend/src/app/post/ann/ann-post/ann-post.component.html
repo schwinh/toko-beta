@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card card-blog fade show active" style="width: 340px; border-radius: 5%;">
+            <div class="card-body">
+                <img class="card-img rounded fade show" [src]="postSrc.imgSrc" style="max-height: 167px;"/>
+                <p class="card-description">
+                    {{ postSrc.des }}
+                </p>
+                <div class="author">
+                    <img [src]="postSrc.authorImgSrc" alt="..." class="avatar img-raised" />
+                    <span>{{ postSrc.authorName }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

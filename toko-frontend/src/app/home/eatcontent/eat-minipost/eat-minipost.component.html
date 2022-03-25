@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card card-blog fade show active" style="width: 340px; border-radius: 5%;" routerLink="../eat-detail">
+            <div class="card-body">
+                <h6 class="card-description">
+                    {{ postSrc.name }}
+                </h6>
+                <img class="card-img rounded fade show" [src]="postSrc.imgSrc" style="max-height: 167px;"/>
+                <div class="container justify-content-center" style="margin-top: 3%;">
+                    <app-eat-post-stars [stars]="postSrc.stars"></app-eat-post-stars> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

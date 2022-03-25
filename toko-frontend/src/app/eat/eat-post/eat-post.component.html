@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card card-blog fade show active" style="width: 340px; border-radius: 5%;" routerLink="../eat-detail">
+            <div class="card-body">
+                <h6 class="card-description">
+                    Pret-A-Manger
+                </h6>
+                <img class="card-img rounded fade show" [src]="postSrc.imgSrc" style="max-height: 167px;"/>
+                <p class="card-description" style="margin-top: 3%">
+                    {{ postSrc.des }}
+                </p>
+                <span class="align-middle">
+                    <div class="author">
+                        <span>{{ postSrc.distance }} KM</span>
+                    </div>
+                    <div class="stats stats-right">
+                      <app-eat-post-stars [stars]="postSrc.stars"></app-eat-post-stars>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
