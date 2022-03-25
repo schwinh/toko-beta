@@ -4,7 +4,6 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Observable } from 'rxjs';
 
 import { TalkPost } from '../../talk-post.model';
-import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-talk-post',
