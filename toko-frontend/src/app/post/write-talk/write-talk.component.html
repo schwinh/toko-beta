@@ -4,9 +4,9 @@
     <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div class="form-group" [ngClass]="{ 'focused': focus10 === true }">
             <div class="mb-3 mt-5">
-                <small class="text-uppercase">
+                <h5 class="text-uppercase">
                     Write a new post
-                </small>
+                </h5>
             </div>
             <textarea
             class="form-control" 
@@ -25,7 +25,11 @@
             </small>
         </div>
         <div class="form-group">
-            <label for="pictureUrl">INSERT AN IMAGE!</label>
+            <label for="pictureUrl">
+                <h5 class="text-uppercase">
+                    Add a picture (optional)
+                </h5>
+            </label>
             <input
                 type="file"
                 id="pictureUrl"
@@ -40,7 +44,7 @@
                     {{ uploadPath || "No file uploaded yet."}}
                 </div>
                 <div class="col-xs">
-                    <button type="button" class="btn btn-default rounded-pill" *ngIf="!isUploaded" (click)="fileUpload.click()">
+                    <button type="button" class="btn rounded-pill" *ngIf="!isUploaded" (click)="fileUpload.click()">
                         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Upload Picture
                     </button>
                 </div>
@@ -62,7 +66,7 @@
             </select>
         </div>
         <div class="container" style="margin-top: 8%">
-            <button class="btn btn-default rounded-pill btn-block" type="submit" [disabled]="!f.valid">Submit Post</button>
+            <button class="btn rounded-pill btn-block" type="submit" [disabled]="!f.valid">Submit Post</button>
         </div>
     </form>
 </div>

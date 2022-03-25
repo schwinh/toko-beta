@@ -1,7 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { NgForm } from '@angular/forms';
-import { finalize, Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { delay, finalize, Observable } from 'rxjs';
+import { FeedService } from 'src/app/common/service/feed.service';
 
 import { TalkPost } from '../talk-post.model';
 import { TalkPostService } from '../talk-post.service';
@@ -20,7 +22,7 @@ export class WriteTalkComponent implements OnInit {
 
   defaultCategory = 'unknown';
 
-  constructor(private talkPostService: TalkPostService, private afStorage: AngularFireStorage) { }
+  constructor(private talkPostService: TalkPostService, private afStorage: AngularFireStorage, private router: Router, private feedService: FeedService) { }
 
   pageToDisplay = "Create Post"
   focus10 = true
@@ -61,6 +63,9 @@ export class WriteTalkComponent implements OnInit {
     
     this.talkPostService.addPostToFirestore(this.talkPost);
     this.talkPostForm.reset();
+    delay(1000);
+    this.feedService.setWriteButton('talk');
+    this.router.navigate(['../post/talk']);
   }
 
 
