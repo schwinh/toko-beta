@@ -14,9 +14,17 @@ export class MyprofileComponent implements OnInit {
 
   ngOnInit(): void {
     this.pageToDisplay = "My Profile";
+    this.getfocus();
+  }
+
+  getfocus() {
+    const talkButton = window.document.getElementById("mytalkbutton")!;
+    talkButton.focus();
   }
 
   onClick(page: string){
     this.page = page;
   }
+
+
 }

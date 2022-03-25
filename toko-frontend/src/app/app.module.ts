@@ -2,8 +2,17 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
+
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+
+
 import { AuthenticationComponent } from './auth/authentication/authentication.component';
 import { LoginComponent } from './auth/login/login.component';
 import { Signup0Component } from './auth/signup/signup0/signup0.component';
@@ -50,13 +59,8 @@ import { WriteCommentComponent } from './common/write-comment/write-comment.comp
 import { WriteEatCommentComponent } from './eat/write-eat-comment/write-eat-comment.component';
 import { WriteTalkCommentComponent } from './post/write-talk-comment/write-talk-comment.component';
 import { TalkDetailComponent } from './post/talk-detail/talk-detail.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideStorage,getStorage } from '@angular/fire/storage';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFirestoreModule} from '@angular/fire/compat/firestore';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { EatCommentComponent } from './eat/eat-detail/eat-comment/eat-comment.component';
+import { TalkCommentComponent } from './post/talk-detail/talk-comment/talk-comment.component';
 
 @NgModule({
   declarations: [
@@ -105,7 +109,9 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
     WriteCommentComponent,
     WriteEatCommentComponent,
     WriteTalkCommentComponent,
-    TalkDetailComponent
+    TalkDetailComponent,
+    EatCommentComponent,
+    TalkCommentComponent
 
   ],
   imports: [
