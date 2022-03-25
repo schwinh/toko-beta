@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { delay, Subscription } from 'rxjs';
 import { FeedService } from '../service/feed.service';
 
 @Component({
@@ -44,4 +44,5 @@ export class ButtonWriteComponent implements OnInit {
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-}
+} 
+
