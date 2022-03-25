@@ -36,19 +36,22 @@
                 required
                 #fileUpload>
             <div class="file-upload">
-                <div class="col-xs">
-                    {{ uploadPath || "No file uploaded yet."}}
-                </div>
-                <div class="col-xs">
+                <div class="col-xs justify-center">
                     <button type="button" class="btn btn-default rounded-pill" *ngIf="!isUploaded" (click)="fileUpload.click()">
                         <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> Upload Picture
                     </button>
                 </div>
             </div>
             <div *ngIf="uploadProgress | async as pct">
-                <progress [value]="pct" max="100"></progress>
+                <!-- <progress [value]="pct" max="100"></progress> -->
             </div>
-            <img [src]="uploadUrl | async" style="max-height: 200px;">
+            <div class="card" style="width: 18rem;" *ngIf="isUploaded">
+                <img class="card-img-top" [src]="uploadUrl | async">
+                <div class="card-body">
+                  <h5 class="card-title">Picture Preview</h5>
+                  <button class="btn btn-default rounded-pill" (click)="cancelUpload()">Upload New Picture</button>
+                </div>
+            </div>
         </div>
         <div class="form-group">
             <select

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Observable } from 'rxjs';
+import { UploadPicService } from 'src/app/common/service/upload-pic.service';
 
 import { TalkPost } from '../../talk-post.model';
 
@@ -13,11 +13,10 @@ export class TalkPostComponent implements OnInit {
   @Input() talkPost: TalkPost;
   imgUrl: Observable<string | null>;
 
-  constructor(private afStorage: AngularFireStorage) { }
+  constructor(private uploadPicService: UploadPicService) { }
 
   ngOnInit(): void {
-    const ref = this.afStorage.ref(this.talkPost.postImgPath);
-    this.imgUrl = ref.getDownloadURL();
+    this.imgUrl = this.uploadPicService.getFileUrl(this.talkPost.postImgPath);
   }
 
   postSrc = {
