@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { finalize, Observable } from 'rxjs';
+import { finalize, Observable, delay } from 'rxjs';
 import { UploadPicService } from 'src/app/common/service/upload-pic.service';
+import { Router } from '@angular/router';
+import { FeedService } from 'src/app/common/service/feed.service';
+
 
 import { TalkPost } from '../talk-post.model';
 import { TalkPostService } from '../talk-post.service';
@@ -20,7 +23,7 @@ export class WriteTalkComponent implements OnInit {
 
   defaultCategory = 'unknown';
 
-  constructor(private talkPostService: TalkPostService, private uploadPicService: UploadPicService) { }
+  constructor(private talkPostService: TalkPostService, private uploadPicService: UploadPicService, private router: Router, private feedService: FeedService) { }
 
   pageToDisplay = "Create Post"
   focus10 = true
@@ -63,6 +66,9 @@ export class WriteTalkComponent implements OnInit {
     
     this.talkPostService.addPostToFirestore(this.talkPost);
     this.talkPostForm.reset();
+    delay(1000);
+    this.feedService.setWriteButton('talk');
+    this.router.navigate(['../post/talk']);
   }
 
   cancelUpload(){

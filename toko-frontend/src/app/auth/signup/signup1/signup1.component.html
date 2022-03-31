@@ -1,5 +1,5 @@
-<p>signup1 works!</p>
-<div class="row">
+<div class="container top-portion">
+  <div class="row">
     <div class="col-md-8 mx-auto">
       <form class="loginform" #authForm="ngForm">
         <div class="form-group">
@@ -27,6 +27,10 @@
         </form>
     </div>
 </div>
-<div class="fixed-bottom">
-    <button class="btn btn-primary" (click)="onNext()">Next</button>
+</div>
+
+<div class="container nextbtn-portion">
+  <div class="fixed-bottom">
+    <button class="btn btn-block rounded-pill" style="background-color: #6C757D; color: white; margin-bottom: 3%;" (click)="onNext()">Next</button>
+  </div>
 </div>

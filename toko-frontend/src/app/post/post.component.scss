@@ -4,6 +4,11 @@
 }
 
 .btn {
-    background-color: #47A23F;
-    border-width: 0px;
+    background-color: #CED4DA;
+    color: white;
+}
+
+.btn:focus {
+    background-color: #47A23F; 
+    color: white
 }

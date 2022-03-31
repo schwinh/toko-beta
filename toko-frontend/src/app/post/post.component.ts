@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { delay } from 'rxjs';
 import { FeedService } from '../common/service/feed.service';
 
 @Component({
@@ -13,6 +14,12 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.navigate(['talk'], {relativeTo: this.route});
+    setTimeout(this.getfocus, 800);
   }
 
+  getfocus() {
+    const talkButton = window.document.getElementById("talkbutton")!;
+    talkButton.focus();
+    console.log('set focus');
+  }
 }

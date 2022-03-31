@@ -1,4 +1,5 @@
-<div class="row justify-content-center align-items-center">
+<div class="container top-portion" style="margin-top: 3%;">
+  <div class="row justify-content-center align-items-center">
     <div class="col-md-8 mx-auto">
       <form class="loginform" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
         <div class="form-group">
@@ -26,12 +27,17 @@
           />
         </div>
         <div>
-          <button class="btn btn-primary" type="submit">Log In</button>
+          <button class="btn btn-block rounded-pill" style="background-color: #47A23F; color: white" type="submit">Log In</button>
         </div>
       </form>
-      <button class="btn btn-secondary" routerLink="../signup" (click)="onChangeMode()" >New to ToKo? Create a new account</button>
-      <div class="fixed-bottom">
-        <p style="color: green">Made with ♥ in Bangkok</p>
-      </div> 
+      <button class="btn btn-block rounded-pill" style="background-color: #6C757D; color: white; margin-top: 3%;" routerLink="../signup" (click)="onChangeMode()" >New to ToKo? Create a new account</button>
   </div>
 </div>
+
+<div class="container remark-portion">
+  <div class="fixed-bottom">
+    <p style="color: green; text-align: center;">Made with ♥ in Bangkok</p>
+  </div> 
+</div>
+
+
