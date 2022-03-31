@@ -48,8 +48,8 @@ const routes: Routes = [
 
   { path: 'eat', component: EatComponent, /*canActivate: [AuthGuard],*/ },
   { path: 'eat-detail', component: EatDetailComponent, /*canActivate: [AuthGuard],*/ },
-  { path: 'write-eat', component: WriteEatComponent },
-  { path: 'write-eat-comment', component: WriteEatCommentComponent },
+  { path: 'write-eat', component: WriteEatComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'write-eat-comment', component: WriteEatCommentComponent, /*canActivate: [AuthGuard],*/ },
 
 
 
@@ -74,9 +74,9 @@ const routes: Routes = [
   { path: 'myprofile', component: MyprofileComponent, /*canActivate: [AuthGuard]*/ },
   { path: 'location', component: LocationComponent, /*canActivate: [AuthGuard]*/ },
   { path: 'editprofile', component: EditprofileComponent, /*canActivate: [AuthGuard]*/},
-  { path: 'changepw', component: ChangepasswordComponent },
-  { path: 'deleteacc', component: DeleteaccComponent },
-  { path: '**', component: PagenotfoundComponent },
+  { path: 'changepw', component: ChangepasswordComponent, /*canActivate: [AuthGuard],*/ },
+  { path: 'deleteacc', component: DeleteaccComponent, /*canActivate: [AuthGuard],*/ },
+  { path: '**', component: PagenotfoundComponent, /*canActivate: [AuthGuard],*/ },
   
 
 ];
